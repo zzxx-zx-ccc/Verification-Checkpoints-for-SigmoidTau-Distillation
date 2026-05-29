@@ -1,12 +1,15 @@
-# Sigmoid-τ distillation hyperparameters used for the released 50-epoch quick-verification checkpoints.
-# These settings are intended to verify the effectiveness of the distillation protocol under a unified setup.
+```yaml
+# Sigmoid-τ distillation defaults for released quick-verification runs.
+# This file provides a reproducible configuration for checking the public
+# training and validation pipeline. It is not intended to represent all
+# paper-production settings.
 
 # Classification KD: sigma_tau(x) = sigmoid(x - log(tau)).
 hyp_T: 3.0
 hyp_cls_distill: 1.0
 hyp_w_t_cls: 0.99
-hyp_w_t_box: 0.50      # reserved for legacy compatibility; partition KD uses region targets directly
-hyp_w_t_dfl: 0.50      # reserved for legacy compatibility; partition KD uses region targets directly
+hyp_w_t_box: 0.50
+hyp_w_t_dfl: 0.50
 hyp_cls_kd_mode: sigmoid_tau
 hyp_cls_kd_t2: false
 
@@ -18,15 +21,18 @@ hyp_use_partition_kd: true
 # Overall distillation strength.
 hyp_kd: 0.1
 
-# Runtime switches.
-flag_train_output: 3        # 1: teacher loss, 2: student loss, 3: supervised + KD loss
-bool_val_output: true       # use student output at validation/export time
+# Runtime switches for the joint teacher-student model.
+flag_train_output: 3
+bool_val_output: true
 hyp_teacher_conf_gate: 0.0
 hyp_kd_log_interval: 50
 
 # Joint teacher-student graph wiring.
+# These layer indices follow the released YOLOv8s-teacher + YOLOv8n-student
+# joint model definitions in configs/yolov8n_sigmoid_tau_*.yaml.
 scale_default: n
 scale_student: n
 scale_teacher: s
 teacher_peer_list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 45]
 student_peer_list: [23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46]
+```
