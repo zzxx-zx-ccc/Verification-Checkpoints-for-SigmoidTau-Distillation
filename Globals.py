@@ -1,9 +1,7 @@
-This project no longer uses `Globals.py` as the source of experimental
-configuration. Dataset paths, checkpoint paths, training schedules, and
-distillation hyperparameters should be specified through `configs/` and
-`scripts/`.
+"""Deprecated compatibility module for SigmoidTau-Distillation.
 
-This file is kept only to avoid import errors in legacy code paths.
+Experiment configuration is controlled by `configs/`, `scripts/`, and command-line
+arguments. This file is kept only for legacy imports.
 """
 
 DEPRECATED_GLOBALS = True
