@@ -1,31 +1,20 @@
 ```yaml
-# Sigmoid-τ distillation defaults for released quick-verification runs.
-# This file provides a reproducible configuration for checking the public
-# training and validation pipeline. It is not intended to represent all
-# paper-production settings.
+# Sigmoid-τ distillation configuration for the released code.
+# This file records method switches and joint teacher-student graph wiring.
+# Dataset paths, input sizes, training epochs, and scalar KD strengths should be
+# specified by scripts or command-line arguments for each experiment.
 
-# Classification KD: sigma_tau(x) = sigmoid(x - log(tau)).
-hyp_T: 3.0
-hyp_cls_distill: 1.0
-hyp_w_t_cls: 0.99
-hyp_w_t_box: 0.50
-hyp_w_t_dfl: 0.50
+# Classification distillation mode.
 hyp_cls_kd_mode: sigmoid_tau
 hyp_cls_kd_t2: false
 
-# Partition-aware localization and DFL KD.
-hyp_box_distill: 0.1
-hyp_dfl_distill: 0.05
+# Partition-aware localization distillation.
 hyp_use_partition_kd: true
-
-# Overall distillation strength.
-hyp_kd: 0.1
 
 # Runtime switches for the joint teacher-student model.
 flag_train_output: 3
 bool_val_output: true
 hyp_teacher_conf_gate: 0.0
-hyp_kd_log_interval: 50
 
 # Joint teacher-student graph wiring.
 # These layer indices follow the released YOLOv8s-teacher + YOLOv8n-student
