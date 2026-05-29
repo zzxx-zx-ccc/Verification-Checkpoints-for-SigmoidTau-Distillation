@@ -1,0 +1,10 @@
+dataset,name,P,R,mAP50,mAP50-95,params,weights,data,imgsz,status,release_scope
+COCO,YOLOv8s-COCO-teacher,0.6817912166324718,0.5623014720649797,0.6128729209440122,0.4474356314689754,11156544,checkpoints/teachers/YOLOv8s-COCO-teacher.pt,configs/coco.yaml,640,ok,verification_checkpoint
+COCO,YOLOv8n-COCO-standard-best,0.6023390979834001,0.4537044272787316,0.49494968876942347,0.3492600558459293,3151904,checkpoints/baselines/YOLOv8n-COCO-standard-best.pt,configs/coco.yaml,640,ok,verification_checkpoint
+COCO,YOLOv8n-SigmoidTau-COCO-best,0.6364078854908747,0.4762262088297159,0.518843512249528,0.3693911518099739,3151904,checkpoints/final_students/YOLOv8n-SigmoidTau-COCO-best.pt,configs/coco.yaml,640,ok,verification_checkpoint
+VOC,YOLOv8s-VOC-teacher,0.8417678704922041,0.8054017537744066,0.8623888208629449,0.6744162612651492,11133324,checkpoints/teachers/YOLOv8s-VOC-teacher.pt,configs/voc.yaml,640,ok,verification_checkpoint
+VOC,YOLOv8n-VOC-standard-best,0.7934466135027723,0.745637086302801,0.8192434112078907,0.6073252930654433,3009548,checkpoints/baselines/YOLOv8n-VOC-standard-best.pt,configs/voc.yaml,640,ok,verification_checkpoint
+VOC,YOLOv8n-SigmoidTau-VOC-best,0.8117259291186858,0.7577219213137381,0.8250684184077868,0.6204956834202291,3009548,checkpoints/final_students/YOLOv8n-SigmoidTau-VOC-best.pt,configs/voc.yaml,640,ok,verification_checkpoint
+VisDrone,YOLOv8s-VisDrone-teacher,0.5788236248472163,0.4575849468444734,0.4851317190857118,0.2998499809237314,11129454,checkpoints/teachers/YOLOv8s-VisDrone-teacher.pt,configs/visdrone.yaml,960,ok,verification_checkpoint
+VisDrone,YOLOv8n-VisDrone-standard-best,0.4998065080888006,0.391703976702313,0.3990669009419949,0.2418507369235168,3007598,checkpoints/baselines/YOLOv8n-VisDrone-standard-best.pt,configs/visdrone.yaml,960,ok,verification_checkpoint
+VisDrone,YOLOv8n-SigmoidTau-VisDrone-best,0.5156862255677475,0.3892653334426355,0.4133414079489407,0.248698112307152,3007598,checkpoints/final_students/YOLOv8n-SigmoidTau-VisDrone-best.pt,configs/visdrone.yaml,960,ok,verification_checkpoint

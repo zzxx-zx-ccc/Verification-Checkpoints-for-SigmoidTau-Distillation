@@ -1,0 +1,25 @@
+﻿*.pt
+*.pth
+*.onnx
+*.engine
+*.torchscript
+
+runs/
+wandb/
+datasets/
+data/
+
+__pycache__/
+*.pyc
+*.cache
+.cache/
+
+.env
+*.log
+.vscode/
+.idea/
+.DS_Store
+
+test for function.py
+test_for_function.py
+test_for_save.pth

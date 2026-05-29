@@ -1,0 +1,9 @@
+License and Attribution Notice
+
+This repository contains research code for "Protocol-Consistent Sigmoid-τ Logit Distillation for Lightweight Object Detection".
+
+The implementation is based on Ultralytics YOLO code. Files derived from Ultralytics YOLO remain subject to the original Ultralytics license terms, including AGPL-3.0 obligations unless a separate Ultralytics Enterprise License is obtained. Please retain original copyright and license notices when redistributing or modifying those files.
+
+The authors' research modifications, configuration files, scripts, and documentation in this repository are released for academic research and reproducibility under the same open-source compatibility requirements as the underlying Ultralytics code.
+
+This notice is provided to avoid ambiguity in the public research release. Users are responsible for ensuring that their use of this repository complies with the applicable Ultralytics license and any dataset/model license terms.

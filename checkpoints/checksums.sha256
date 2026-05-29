@@ -1,0 +1,3 @@
+# Fill after uploading/downloading public checkpoints.
+# Example:
+# <sha256>  checkpoints/final_students/YOLOv8n-SigmoidTau-COCO-best.pt
