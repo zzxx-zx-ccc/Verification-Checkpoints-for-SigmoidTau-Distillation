@@ -1,13 +1,12 @@
 # Protocol-Consistent Sigmoid-τ Logit Distillation for Lightweight Object Detection
 
-This repository is the public code package for the manuscript **"Protocol-Consistent Sigmoid-τ Logit Distillation for Lightweight Object Detection"**.
+The implementation is built on Ultralytics YOLOv8. The exported student detector remains a standard YOLOv8n model, and the proposed distillation components are used only during training.
 
-The implementation is built on Ultralytics YOLOv8 and keeps the exported student detector as a standard YOLOv8n model. The proposed components are used only during training:
+* **Sigmoid-τ classification distillation:** applies class-wise logit modulation under the Sigmoid/BCE detection protocol. The modulation is implemented as `sigma_tau(z) = sigmoid(z - log(tau))`.
 
-1. **Sigmoid-τ classification distillation**: class-wise logit modulation under the Sigmoid/BCE detection protocol, implemented as `sigmoid(z - log(tau))`.
-2. **Partition-aware localization distillation**: teacher and student foreground assignments are produced independently by the native YOLOv8 task-aligned assigner and divided into `R_t`, `R_s`, and `R_o` for region-specific box/DFL supervision.
+* **Partition-aware localization distillation:** independently generates teacher and student foreground assignments using the native YOLOv8 task-aligned assigner. The foreground positions are divided into the teacher-only positive region `R_t`, the student-only positive region `R_s`, and the shared positive region `R_o`. These regions are used for region-specific box and DFL supervision.
 
-No additional inference module is added to the final student model. Therefore, after exporting the student branch, the parameter count, FLOPs, and inference behavior remain the same as the corresponding YOLOv8n detector.
+No additional inference module is added to the final student model. Therefore, after exporting the student branch, the parameter count, FLOPs, and inference behavior remain the same as those of the corresponding YOLOv8n detector.
 
 ## Release scope
 
