@@ -1,8 +1,6 @@
 ```yaml
-# Sigmoid-τ distillation configuration for the released code.
-# This file records method switches and joint teacher-student graph wiring.
-# Dataset paths, input sizes, training epochs, and scalar KD strengths should be
-# specified by scripts or command-line arguments for each experiment.
+# configs/hyp_sigmoid_tau.yaml only records method switches and joint-graph wiring.
+# Dataset-specific settings and scalar hyperparameters are controlled by scripts or command-line arguments.
 
 # Classification distillation mode.
 hyp_cls_kd_mode: sigmoid_tau
